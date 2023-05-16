@@ -1,0 +1,590 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Recepcion</title>
+</head>
+
+<body>
+<form name="index" action="control_recepcion.php" method="POST">
+<header><em><strong><center>RECEPCIÓN DE VEHÍCULOS</center></strong></em>
+  <div>
+    <table width="1039" height="40" border="1">
+      <tbody>
+        <tr>
+          <td width="538"><label for="datetime-local">FECHA Y HORA DE INGRESO:</label>
+          <input type="datetime-local" name="datetime-local" id="datetime-local"></td>
+          <td width="485"><label for="select">NOMBRE DE QUIEN RECIBE:</label>
+            <select name="select" id="select">
+	<option value="">--SELECCIONA UNA OPCIÓN--</option>
+    <option value="empl1">Mario</option>
+    <option value="empl2">Daniela</option>
+    <option value="empl3">David</option>
+    <option value="empl4">Yasmín</option>
+          </select></td>
+        </tr>
+      </tbody>
+    </table>
+  &nbsp;
+  <div>
+    <p>DATOS DEL CLIENTE</p>
+    <table width="566" height="98" border="1">
+      <tbody>
+        <tr>
+          <td width="279"><label for="rfc">RFC:</label>
+            <input type="rfc" name="rfc" id="rfc"></td>
+          <td width="271"><input name="buscar" type="submit" id="buscar" value="BUSCAR"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><label for="nom">NOMBRE:</label>
+            <input type="nom" name="nom" id="nom"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><label for="email">CORREO ELECTRÓNICO:</label>
+            <input type="email" name="email" id="email"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><label for="domicilio">DOMICILIO:</label>
+            <input name="domicilio" type="text" id="domicilio"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><label for="tel">TELÉFONO:</label>
+            <input type="tel" name="tel" id="tel"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" name="registrar" id="registrar" value="REGISTRAR"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <p>DATOS DEL AUTOMOVIL</p>
+      <table width="1124" height="110" border="1">
+        <tbody>
+          <tr>
+            <td width="404"><label for="placas">NÚMERO DE PLACAS:</label>
+              <input type="text" name="placas" id="placas"></td>
+            <td width="361"><label for="marca">MARCA:</label>
+              <select name="marca" id="marca">
+                <option value="">--SELECCIONA LA MARCA--</option>
+                <option value="nissan">NISSAN</option>
+                <option value="ford">FORD</option>
+                <option value="chevrolet">CHEVROLET</option>
+                <option value="volvo">VOLVO</option>
+                <option value="audi">AUDI</option>
+                <option value="vw">VOLKSWAGEN</option>
+                <option value="toyota">TOYOTA</option>
+                <option value="subaru">SUBARU</option>
+                <option value="renault">RENAULT</option>
+                <option value="honda">HONDA</option>
+                <option value="jeep">JEEP</option>
+                <option value="buick">BUICK</option>
+                <option value="lincon">LINCON</option>
+                <option value="bmw">BMW</option>
+                <option value="kia">KIA</option>
+                <option value="seat">SEAT</option>
+                <option value="mitsubishi">MITSUBISHI</option>
+                <option value="peaugeot">PEAUGEOT</option>
+                <option value="jac">JAC</option>
+                <option value="suzuli">SUZUKI</option>
+                <option value="hyundai">HYUNDAI</option>
+                <option value="dodge">DODGE</option>
+                <option value="mercedes-benz">MERCEDES-BENZ</option>
+                <option value="mini cooper">MINI COOPER</option>
+                <option value="fiat">FIAT</option>
+                <option value="chrysler">CHRYSLER</option>
+                <option value="acura">ACURA</option>
+                <option value="cupra">CUPRA</option>
+                <option value="mazda">MAZDA</option>
+              </select></td>
+            <td width="323"><label for="modelo">MODELO:</label>
+              <input type="text" name="modelo" id="modelo"></td>
+          </tr>
+          <tr>
+            <td><label for="version">VERSIÓN</label>
+              <input type="text" name="version" id="version"></td>
+            <td><label for="color">COLOR:</label>
+              <select name="color" id="color">
+                <option value="azul">Azul</option>
+                <option value="rojo">Rojo</option>
+                <option value="negro">Negro</option>
+                <option value="blanco">Blanco</option>
+                <option value="verde">Verde</option>
+                <option value="amarillo">Amarillo</option>
+                <option value="plata">Plata</option>
+              </select></td>
+            <td><label for="tipo">TIPO:</label>
+              <select name="tipo" id="tipo">
+                <option value="auto">Auto</option>
+                <option value="suvs">SUVs</option>
+                <option value="pickups">Pick Ups</option>
+                <option value="vans">Vans</option>
+                <option value="comerciales">Comerciales</option>
+                <option value="deportivos">Deportivos</option>
+                <option value="electricos">Eléctricos</option>
+              </select></td>
+          </tr>
+          <tr>
+            <td><label for="year">AÑO:</label>
+              <input type="text" name="year" id="year"></td>
+            <td></td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <p>&nbsp;</p>
+        <p>ESTADO DEL AUTO INTERNO</p>
+        <table width="1118" border="1">
+          <tbody>
+            <tr>
+              <td width="307" rowspan="2"><p><strong>DESCRIPCIÓN</strong></p></td>
+              <td width="56" rowspan="2"><p><strong>BUENA</strong></p></td>
+              <td width="79" rowspan="2"><p><strong>REGULAR</strong></p></td>
+              <td width="49" rowspan="2"><p><strong>MALA</strong></p></td>
+				<td colspan="2"><p><strong><center>TIENE</center></strong></p></td>
+              <td width="455" rowspan="2"><p><strong><center>NOTAS</center></strong></p></td>
+            </tr>
+            <tr>
+              <td width="66"><center>SI</center></td>
+              <td width="60"><center>NO</center></td>
+              </tr>
+            <tr>
+              <td><input name="vestiduras" type="text" id="vestiduras" value="VESTIDURAS" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bvest" id="Bvest"></center></td>
+              <td><center><input type="checkbox" name="Rvest" id="Rvest"></center></td>
+              <td><center><input type="checkbox" name="Mvest" id="Mvest"></center></td>
+              <td><center><input type="checkbox" name="Svest" id="Svest"></center></td>
+              <td><center><input type="checkbox" name="Nvest" id="Nvest"></center></td>
+              <td><input name="Notevest" type="text" id="Notevest" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="tapetes" type="text" id="tapetes" value="TAPETES" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Btap" id="Btap"></center></td>
+              <td><center><input type="checkbox" name="Rtap" id="Rtap"></center></td>
+              <td><center><input type="checkbox" name="Mtap" id="Mtap"></center></td>
+              <td><center><input type="checkbox" name="Stap" id="Stap"></center></td>
+              <td><center><input type="checkbox" name="Ntap" id="Ntap"></center></td>
+              <td><input name="Notetap" type="text" id="Notetap" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="estereo_pantalla" type="text" id="estereo_pantalla" value="ESTEREO/PANTALLA" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bep" id="Bep"></center></td>
+              <td><center><input type="checkbox" name="Rep" id="Rep"></center></td>
+              <td><center><input type="checkbox" name="Mep" id="Mep"></center></td>
+              <td><center><input type="checkbox" name="Sep" id="Sep"></center></td>
+              <td><center><input type="checkbox" name="Nep" id="Nep"></center></td>
+              <td><input name="Noteep" type="text" id="Noteep" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="calefaccion" type="text" id="calefaccion" value="CALEFACCIÓN" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bcal" id="Bcal"></center></td>
+              <td><center><input type="checkbox" name="Rcal" id="Rcal"></center></td>
+              <td><center><input type="checkbox" name="Mcal" id="Mcal"></center></td>
+              <td><center><input type="checkbox" name="Scal" id="Scal"></center></td>
+              <td><center><input type="checkbox" name="Ncal" id="Ncal"></center></td>
+              <td><input name="Notecal" type="text" id="Notecal" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="retrovisor" type="text" id="retrovisor" value="RETROVISOR" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bret" id="Bret"></center></td>
+              <td><center><input type="checkbox" name="Rret" id="Rret"></center></td>
+              <td><center><input type="checkbox" name="Mret" id="Mret"></center></td>
+              <td><center><input type="checkbox" name="Sret" id="Sret"></center></td>
+              <td><center><input type="checkbox" name="Nret" id="Nret"></center></td>
+              <td><input name="Noteret" type="text" id="Noteret" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+             <td><input name="cinturon" type="text" id="cinturon" value="CINTURÓN DE SEGURIDAD" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bcin" id="Bcin"></center></td>
+              <td><center><input type="checkbox" name="Rcin" id="Rcin"></center></td>
+              <td><center><input type="checkbox" name="Mcin" id="Mcin"></center></td>
+              <td><center><input type="checkbox" name="Scin" id="Scin"></center></td>
+              <td><center><input type="checkbox" name="Ncin" id="Ncin"></center></td>
+              <td><input name="Notecin" type="text" id="Notecin" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="ventanillas" type="text" id="ventanillas" value="VENTANILLAS" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bven" id="Bven"></center></td>
+              <td><center><input type="checkbox" name="Rven" id="Rven"></center></td>
+              <td><center><input type="checkbox" name="Mven" id="Mven"></center></td>
+              <td><center><input type="checkbox" name="Sven" id="Sven"></center></td>
+              <td><center><input type="checkbox" name="Nven" id="Nven"></center></td>
+             <td><input name="Noteven" type="text" id="Noteven" autocomplete="off" size="80"></td> 
+            </tr>
+            <tr>
+              <td><input name="tablero" type="text" id="tablero" value="TABLERO" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Btab" id="Btab"></center></td>
+              <td><center><input type="checkbox" name="Rtab" id="Rtab"></center></td>
+              <td><center><input type="checkbox" name="Mtab" id="Mtab"></center></td>
+              <td><center><input type="checkbox" name="Stab" id="Stab"></center></td>
+              <td><center><input type="checkbox" name="Ntab" id="Ntab"></center></td>
+              <td><input name="Notetab" type="text" id="Notetab" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="manijasseguros" type="text" id="manijasseguros" value="MANIJAS Y SEGUROS" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bmanseg" id="Bmanseg"></center></td>
+              <td><center><input type="checkbox" name="Rmanseg" id="Rmanseg"></center></td>
+              <td><center><input type="checkbox" name="Mmanseg" id="Mmanseg"></center></td>
+              <td><center><input type="checkbox" name="Smanseg" id="Smanseg"></center></td>
+              <td><center><input type="checkbox" name="Nmanseg" id="Nmanseg"></center></td>
+              <td><input name="Notemanseg" type="text" id="Notemanseg" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="luzservicio" type="text" id="luzservicio" value="LUZ DE SERVICIO" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bluz" id="Bluz"></center></td>
+              <td><center><input type="checkbox" name="Rluz" id="Rluz"></center></td>
+              <td><center><input type="checkbox" name="Mluz" id="Mluz"></center></td>
+              <td><center><input type="checkbox" name="Sluz" id="Sluz"></center></td>
+              <td><center><input type="checkbox" name="Nluz" id="Nluz"></center></td>
+             <td><input name="Noteluz" type="text" id="Noteluz" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="puertadd" type="text" id="puertadd" value="TAPA DE LA PUERTA(DELANTERA DERECHA)" size="60" readonly="readonly"></td>
+			  <td><center><input type="checkbox" name="Bpdd" id="Bpdd"></center></td>
+              <td><center><input type="checkbox" name="Rpdd" id="Rpdd"></center></td>
+              <td><center><input type="checkbox" name="Mpdd" id="Mpdd"></center></td>
+              <td><center><input type="checkbox" name="Spdd" id="Spdd"></center></td>
+              <td><center><input type="checkbox" name="Npdd" id="Npdd"></center></td>
+              <td><input name="Notepdd" type="text" id="Notepdd" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="puertadi" type="text" id="puertadi" value="TAPA DE LA PUERTA(DELANTERA IZQUIERDA)" size="60" readonly="readonly"></td>
+				
+              <td><center><input type="checkbox" name="Bpdi" id="Bpdi"></center></td>
+              <td><center><input type="checkbox" name="Rpdi" id="Rpdi"></center></td>
+              <td><center><input type="checkbox" name="Mpdi" id="Mpdi"></center></td>
+              <td><center><input type="checkbox" name="Spdi" id="Spdi"></center></td>
+              <td><center><input type="checkbox" name="Npdi" id="Npdi"></center></td>
+              <td><input name="Notepdi" type="text" id="Notepdi" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="puertatd" type="text" id="puertatd" value="TAPA DE LA PUERTA(TRASERA DERECHA)" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bptd" id="Bptd"></center></td>
+              <td><center><input type="checkbox" name="Rptd" id="Rptd"></center></td>
+              <td><center><input type="checkbox" name="Mptd" id="Mptd"></center></td>
+              <td><center><input type="checkbox" name="Sptd" id="Spdt"></center></td>
+              <td><center><input type="checkbox" name="Nptd" id="Nptd"></center></td>
+              <td><input name="Noteptd" type="text" id="Noteptd" autocomplete="off" size="80"></td>
+            </tr>
+            <tr>
+              <td><input name="puertati" type="text" id="puertati" value="TAPA DE LA PUERTA(TRASERA IZQUIERDA)" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="Bpti" id="Bpti"></center></td>
+              <td><center><input type="checkbox" name="Rpti" id="Rpti"></center></td>
+              <td><center><input type="checkbox" name="Mpti" id="Mpti"></center></td>
+              <td><center><input type="checkbox" name="Spti" id="Spti"></center></td>
+              <td><center><input type="checkbox" name="Npti" id="Npti"></center></td>
+             <td><input name="Notepti" type="text" id="Notepti" autocomplete="off" size="80"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <p>ESTADO DEL AUTO EXTERIOR </p>
+        <table width="1124" border="1">
+          <tbody>
+            <tr>
+              <td width="453"><strong><center>DESCRIPCIÓN</center></strong></td>
+              <td width="30"><strong><center>SI</center></strong></td>
+              <td width="30"><strong><center>NO</center></strong></td>
+              <td width="583"><strong><center>NOTAS</center></strong></td>
+            </tr>
+            <tr>
+            <td><input name="golpes" type="text" id="golpes" value="GOLPES" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxgolpeS" id="checkboxgolpeS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxgolpeN" id="checkboxgolpeN" value="NO"></center></td>
+              <td><input name="notagolpe" type="text" id="notagolpe" size="100"></td>
+            </tr>
+            <tr>
+              <td><input name="pintura" type="text" id="pintura" value="EDO DE LA PINTURA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxpinturaS" id="checkboxpinturaS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxpinturaN" id="checkboxpinturaN" value="NO"></center></td>
+              <td><input name="notapintura" type="text" id="notapintura" size="100"></td>
+            </tr>
+            <tr>
+             <td><input name="cofre" type="text" id="cofre" value="COFRE" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxcofreS" id="checkboxcofreS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxcofreN" id="checkboxcofreN" value="NO"></center></td>
+              <td><input name="notacofre" type="text" id="notacofre" size="100"></td>
+            </tr>
+            <tr>
+             <td><input name="cajuela" type="text" id="cajuela" value="CAJUELA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxcajuelaS" id="checkboxcajuelaS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxcajuelaN" id="checkboxcajuelaN" value="NO"></center></td>
+              <td><input name="notacajuela" type="text" id="notacajuela" size="100"></td>
+            </tr>
+            <tr>
+             <td><input name="tapong" type="text" id="tapong" value="TAPÓN DE GASOLINA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxtapongS" id="checkboxtapongS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxtapongN" id="checkboxtapongN" value="NO"></center></td>
+              <td><input name="notatapong" type="text" id="notatapong" size="100"></td>
+            </tr>
+            <tr>
+             <td><input name="techo" type="text" id="techo" value="TECHO" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxtechoS" id="checkboxtechoS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxtechoN" id="checkboxtechoN" value="NO"></center></td>
+              <td><input name="notatecho" type="text" id="notatecho" size="100"></td>
+            </tr>
+            <tr>
+             <td><input name="defensa" type="text" id="defensa" value="DEFENSA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxdefensaS" id="checkboxdefensaS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxdefensaN" id="checkboxdefensaN" value="NO"></center></td>
+              <td><input name="notadefensa" type="text" id="notadefensa" size="100"></td>
+            </tr>
+            <tr>
+             <td><input name="alarma" type="text" id="alarma" value="SISTEMA DE ALARMA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxalarmaS" id="checkboxalarmaS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxalarmaN" id="checkboxalarmaN" value="NO"></center></td>
+              <td><input name="notaalarma" type="text" id="notaalarma" size="100"></td>
+            </tr>
+            <tr>
+            <td><input name="limpiaparabrisas" type="text" id="limpiaparabrisas" value="LIMPIAPARABRISAS" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxlimpiapS" id="checkboxlimpiapS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxlimpiapN" id="checkboxlimpiapN" value="NO"></center></td>
+              <td><input name="notalimpiap" type="text" id="notalimpiap" size="100"></td>
+            </tr>
+            <tr>
+            <td><input name="aspersores" type="text" id="aspersores" value="ASPERSORES" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxaspersoresS" id="checkboxaspersoresS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxaspersoresN" id="checkboxaspersoresN" value="NO"></center></td>
+              <td><input name="notaaspersores" type="text" id="notaaspersores" size="100"></td>
+            </tr>
+            <tr>
+            <td><input name="parabrisas" type="text" id="parabrisas" value="PARABRISAS" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxparabrisasS" id="checkboxparabrisasS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxparabrisasN" id="checkboxparabrisasN" value="NO"></center></td>
+              <td><input name="notaparabrisas" type="text" id="notaparabrisas" size="100"></td>
+            </tr>
+            <tr>
+          <td><input name="medallon" type="text" id="medallon" value="MEDALLON" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxmedallonS" id="checkboxmedallonS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxmedallonN" id="checkboxmedallonN" value="NO"></center></td>
+              <td><input name="notamedallon" type="text" id="notamedallon" size="100"></td>
+            </tr>
+            <tr>
+              <td><input name="espejold" type="text" id="espejold" value="ESPEJO LATERAL DERECHO" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxespejoldS" id="checkboxespejoldS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxespejoldN" id="checkboxespejoldN" value="NO"></center></td>
+              <td><input name="notaespejold" type="text" id="notaespejold" size="100"></td>
+            </tr>
+            <tr>
+            <td><input name="espejoli" type="text" id="espejoli" value="ESPEJO LATERAL IZQUIERDO" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxespejoliS" id="checkboxespejoliS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxespejoliN" id="checkboxespejoliN" value="NO"></center></td>
+              <td><input name="notaespejoli" type="text" id="notaespejoli" size="100"></td>
+            </tr>
+            <tr>
+		<td><input name="farosdd" type="text" id="farodd" value="FAROS(CUARTOS, PRINCIPALES, ALTAS) DELANTERAS DERECHA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxfarosddS" id="checkboxfarosddS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxfarosddN" id="checkboxfarosddN" value="NO"></center></td>
+              <td><input name="notafarosdd" type="text" id="notafarosdd" size="100"></td>
+            </tr>
+            <tr>
+		<td><input name="farosdi" type="text" id="farodi" value="FAROS(CUARTOS, PRINCIPALES, ALTAS) DELANTERAS IZQUIERDA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxfarosdiS" id="checkboxfarosdiS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxfarosdiN" id="checkboxfarosdiN" value="NO"></center></td>
+              <td><input name="notafarosdi" type="text" id="notafarosdi" size="100"></td>
+            </tr>
+            <tr>
+		<td><input name="indd" type="text" id="indd" value="INTERMITENTES DELANTERAS DERECHA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxinddS" id="checkboxinddS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxinddN" id="checkboxinddN" value="NO"></center></td>
+              <td><input name="notaindd" type="text" id="notaindd" size="100"></td>
+            </tr>
+            <tr>
+		<td><input name="indi" type="text" id="indi" value="INTERMITENTES DELANTERA IZQUIERDA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxindiS" id="checkboxindiS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxindiN" id="checkboxindiN" value="NO"></center></td>
+              <td><input name="notaindi" type="text" id="notaindi" size="100"></td>
+            </tr>
+            <tr>
+		<td><input name="intd" type="text" id="indt" value="INTERMITENTES TRASERAS DERECHA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxintdS" id="checkboxintdS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxintdN" id="checkboxintdN" value="NO"></center></td>
+              <td><input name="notaintd" type="text" id="notaintd" size="100"></td>
+            </tr>
+            <tr>
+				<td><input name="inti" type="text" id="inti" value="INTERMITENTES TRASERAS IZQUIERDA" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxintiS" id="checkboxintiS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxintiN" id="checkboxintiN" value="NO"></center></td>
+              <td><input name="notainti" type="text" id="notainti" size="100"></td>
+            </tr>
+            <tr>
+			<td><input name="rinesd" type="text" id="rinesd" value="RINES DELANTEROS" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxrinesdS" id="checkboxrinesdS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxrinesdN" id="checkboxrinesdN" value="NO"></center></td>
+              <td><input name="notarinesd" type="text" id="notarinesd" size="100"></td>
+            </tr>
+            <tr>
+			<td><input name="rinest" type="text" id="rinest" value="RINES TRASEROS" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxrinestS" id="checkboxrinestS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxrinestN" id="checkboxrinestN" value="NO"></center></td>
+              <td><input name="notarinest" type="text" id="notarinest" size="100"></td>
+            </tr>
+            <tr>
+			<td><input name="tapondd" type="text" id="tapondd" value="TAPÓN DELANTERO DERECHO" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxtaponddS" id="checkboxtaponddS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxtaponddN" id="checkboxtaponddN" value="NO"></center></td>
+              <td><input name="notatapondd" type="text" id="notatapondd" size="100"></td>
+            </tr>
+            <tr>
+			<td><input name="tapondi" type="text" id="tapondi" value="TAPÓN DELANTERO IZQUIERDO" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxtapondiS" id="checkboxtapondiS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxtapondiN" id="checkboxtapondiN" value="NO"></center></td>
+              <td><input name="notatapondi" type="text" id="notatapondi" size="100"></td>
+            </tr>
+            <tr>
+			<td><input name="tapontd" type="text" id="tapontd" value="TAPÓN TRASERO DERECHO" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxtapontdS" id="checkboxtapontdS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxtapontdN" id="checkboxtapontdN" value="NO"></center></td>
+              <td><input name="notatapontd" type="text" id="notatapontd" size="100"></td>
+            </tr>
+            <tr>
+			<td><input name="taponti" type="text" id="taponti" value="TAPÓN TRASERO IZQUIERDO" size="80" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="checkboxtapontiS" id="checkboxtapontiS" value="SI"></center></td>
+              <td><center><input type="checkbox" name="checkboxtapontiN" id="checkboxtapontiN" value="NO"></center></td>
+              <td><input name="notataponti" type="text" id="notataponti" size="100"></td>
+            </tr>
+          </tbody>
+      </table>
+      </div>
+      <div>
+        <p>&nbsp;</p>
+        <p>PERTENENCIAS</p>
+        <table width="1121" border="1">
+          <tbody>
+            <tr>
+              <td width="366">DESCRIPCIÓN </td>
+              <td width="22">SI</td>
+              <td width="29">NO</td>
+              <td width="676">NOTAS</td>
+            </tr>
+            <tr>
+              <td><input name="gato" type="text" id="gato" value="GATO" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="chbgatoS" id="chbgatoS" value ="SI"></center></td>
+              <td><center><input type="checkbox" name="chbgatoN" id="chbgatoN" value ="NO"></center></td>
+              <td><input name="notagato" type="text" id="notagato" size="115"></td>
+            </tr>
+            <tr>
+              <td><input name="llantar" type="text" id="llantar" value="LLANTA DE REFRACCIÓN" size="60" readonly="readonly"></td>
+			  <td><center><input type="checkbox" name="chbllantarS" id="chbllantarS" value ="SI"></center></td>
+              <td><center><input type="checkbox" name="chbllantarN" id="chbllantarN" value ="NO"></center></td>
+              <td><input name="notallantar" type="text" id="notallantar" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="reflec" type="text" id="reflec" value="REFLECTANTES DE EMERGENCIA (SEÑALAMIENTOS)" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="chbreflecS" id="chbreflecS" value ="SI"></center></td>
+              <td><center><input type="checkbox" name="chbreflecN" id="chbreflecN" value ="NO"></center></td>
+              <td><input name="notareflec" type="text" id="notareflec" size="115"></td>
+            </tr>
+            <tr>
+ 			<td><input name="cajaH" type="text" id="cajaH" value="CAJA DE HERRAMIENTAS" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="chbcajaHS" id="chbcajaHS" value ="SI"></center></td>
+              <td><center><input type="checkbox" name="chbcajaHN" id="chbcajaHN" value ="NO"></center></td>
+              <td><input name="notacajaH" type="text" id="notacajaH" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="extintor" type="text" id="extintor" value="EXTINTOR" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="chbextintorS" id="chbextintorS" value ="SI"></center></td>
+             <td><center><input type="checkbox" name="chbextintorN" id="chbextintorN" value ="NO"></center></td>
+              <td><input name="notaextintor" type="text" id="notaextintor" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="docs" type="text" id="docs" value="DOCUMENTACIÓN DEL AUTO" size="60" readonly="readonly"></td>
+             <td><center><input type="checkbox" name="chbdocsS" id="chbdocsS" value ="SI"></center></td>
+              <td><center><input type="checkbox" name="chbdocsN" id="chbdocsN" value ="NO"></center></td>
+             <td><input name="notadocs" type="text" id="notadocs" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="cables" type="text" id="cables" value="CABLES PASA CORRIENTE" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="chbcablesS" id="chbcablesS" value ="SI"></center></td>
+             <td><center><input type="checkbox" name="chbcablesN" id="chbcablesN" value ="NO"></center></td>
+              <td><input name="notacables" type="text" id="notacables" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="maneral" type="text" id="maneral" value="MANERAL DE GATO" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="chbmaneralS" id="chbmaneralS" value ="SI"></center></td>
+              <td><center><input type="checkbox" name="chbmaneralN" id="chbmaneralN" value ="NO"></center></td>
+              <td><input name="notamaneral" type="text" id="notamaneral" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="llaveC" type="text" id="llaveC" value="LLAVE DE CRUZ" size="60" readonly="readonly"></td>
+             <td><center><input type="checkbox" name="chbllaveCS" id="chbllaveCS" value ="SI"></center></td>
+        <td><center><input type="checkbox" name="chbllaveCN" id="chbllaveCN" value ="NO"></center></td>
+              <td><input name="notallaveC" type="text" id="notallaveC" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="birlo" type="text" id="birlo" value="BIRLO DE SEGURIDAD" size="60" readonly="readonly"></td>
+             <td><center><input type="checkbox" name="chbbirloS" id="chbbirloS" value ="SI"></center></td>
+             <td><center><input type="checkbox" name="chbbirloN" id="chbbirloN" value ="NO"></center></td>
+              <td><input name="notabirlo" type="text" id="notabirlo" size="115"></td>
+            </tr>
+            <tr>
+             <td><input name="dados" type="text" id="dados" value="DADOS" size="60" readonly="readonly"></td>
+              <td><center><input type="checkbox" name="chbdadosS" id="chbdadosS" value ="SI"></center></td>
+              <td><center><input type="checkbox" name="chbdadosN" id="chbdadosN" value ="NO"></center></td>
+              <td><input name="notadados" type="text" id="notadados" size="115"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div>
+          <p>&nbsp;</p>
+          <p>ESTADO DE LAS LLANTAS</p>
+          <table width="653" height="184" border="1">
+            <tbody>
+              <tr>
+                <td width="237">DESCRIPCIÓN</td>
+                <td width="62">NUEVA</td>
+                <td width="126">MEDIO DE VIDA</td>
+                <td width="163">UN CUARTO DE VIDA</td>
+                <td width="31">LISA</td>
+              </tr>
+              <tr>
+                <td><input name="dd" type="text" id="dd" value="DELANTERA DERECHA" size="40" readonly="readonly"></td>
+                <td><center><input type="checkbox" name="ddN" id="ddN" value ="NUEVA"></center></td>
+                <td><center><input type="checkbox" name="dd12" id="dd12" value ="1/2"></center></td>
+                <td><center><input type="checkbox" name="dd14" id="dd14" value ="1/4"></center></td>
+                <td><center><input type="checkbox" name="ddlisa" id="ddlisa" value ="LISA"></center></td>
+              </tr>
+              <tr>
+                <td><input name="di" type="text" id="di" value="DELANTERA IZQUIERDA" size="40" readonly="readonly"></td>
+                <td><center><input type="checkbox" name="diN" id="diN" value ="NUEVA"></center></td>
+                <td><center><input type="checkbox" name="di12" id="di12" value ="1/2"></center></td>
+                <td><center><input type="checkbox" name="di14" id="di14" value ="1/4"></center></td>
+                <td><center><input type="checkbox" name="dilisa" id="dilisa" value ="LISA"></center></td>
+              </tr>
+              <tr>
+               <td><input name="td" type="text" id="td" value="TRASERA DERECHA" size="40" readonly="readonly"></td>
+                <td><center><input type="checkbox" name="tdN" id="tdN" value ="NUEVA"></center></td>
+                <td><center><input type="checkbox" name="td12" id="td12" value ="1/2"></center></td>
+                <td><center><input type="checkbox" name="td14" id="td14" value ="1/4"></center></td>
+                <td><center><input type="checkbox" name="tdlisa" id="tdlisa" value ="LISA"></center></td>
+              </tr>
+              <tr>
+                <td><input name="ti" type="text" id="ti" value="TRASERA IZQUIERDA" size="40" readonly="readonly"></td>
+                <td><center><input type="checkbox" name="tiN" id="tiN" value ="NUEVA"></center></td>
+                <td><center><input type="checkbox" name="ti12" id="ti12" value ="1/2"></center></td>
+                <td><center><input type="checkbox" name="ti14" id="ti14" value ="1/4"></center></td>
+                <td><center><input type="checkbox" name="tilisa" id="tilisa" value ="LISA"></center></td>
+              </tr>
+              <tr>
+                <td><input name="refraccion" type="text" id="refraccion" value="REFRACCIÓN" size="40" readonly="readonly"></td>
+                <td><center><input type="checkbox" name="refraccionN" id="refraccionN" value ="NUEVA"></center></td>
+                <td><center><input type="checkbox" name="refraccion12" id="refraccion12" value ="1/2"></center></td>
+                <td><center><input type="checkbox" name="refraccion14" id="refraccion14" value ="1/4"></center></td>
+                <td><center><input type="checkbox" name="refraccionlisa" id="refraccionlisa" value ="LISA"></center></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <input type="submit" name="guardar" id="guardar" value="GUARDAR">
+          </p>
+        </div>
+        <p>&nbsp;</p>
+      </div>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  </div>
+</header>
+</body>
+</html>

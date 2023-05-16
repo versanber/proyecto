@@ -1,0 +1,470 @@
+<?php
+	require 'conexion.php';
+	
+?>
+
+<html lang="es">
+<form id="" method="" action="">
+          <div id="tabs-1">
+        <p>
+            <br>
+			<center>
+				<tr>
+				<h2>Formulario Dos</h2> 
+				</tr>
+			</center>
+			<ul>
+			
+			<div class="row table-responsive">
+				<table class="table table-striped">
+					<thead>
+					<center>
+						<tr>
+						<h2> <input type="checkbox" id="corto" name="corto"/> <label>Servicio (no mayor a 3 o 4 horas).</label> </h2> 
+						</tr>
+					</center>
+					</thead>
+					 
+					<tbody>
+							<center>
+							<tr>
+								<td>
+								<br>
+								<li>
+								<label>Cambio de aceite</label>
+								<input type="checkbox" id="cambio_aceite" name="cambio_aceite"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Filtro de Aceite</label>
+								<input type="checkbox" id="filtro_aceite" name="filtro_aceite"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Filtro de Aire</label>
+								<input type="checkbox" id="filtro_aire" name="filtro_aire"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Filtro de Gasolina</label>
+								<input type="checkbox" id="filtro_gasolina" name="filtro_gasolina"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Anticongelante</label>
+								<input type="checkbox" id="anticongelante" name="anticongelante"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Lavado de Inyectores</label>
+								<input type="checkbox" id="lavado_inyectores" name="lavado_inyectores"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Lavado de Depositos</label>
+								<input type="checkbox" id="lavado_depositos" name="lavado_depositos"/><br/>
+								</li>
+								</td>
+								
+								<td>
+								<br>
+								<li>
+								<label>Bujias</label>
+								<input type="checkbox" id="bujias" name="bujias"/><br/>
+								</li>
+								<br> 
+								<li>
+								<label>Revisión del esatdo de la bateria</label>
+								<input type="checkbox" id="revision_bateria" name="revision_bateria"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Revisión de Luces</label>
+								<input type="checkbox" id="revision_luces" name="revision_luces"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Ajuste de Clutch</label>
+								<input type="checkbox" id="ajuste_clutch" name="ajuste_clutch"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Frenos</label>
+								<input type="checkbox" id="frenos" name="frenos"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Alinición y Balanceo</label>
+								<input type="checkbox" id="alinición_balanceo" name="alinición_balanceo"/><br/>
+								</li>
+								<br>
+								<li>
+								<label>Neumaticos</label>
+								<input type="checkbox" id="neumaticos" name="neumaticos"/><br/>
+								</li>
+								</td>
+							</tr>
+							</center>
+					</tbody>
+				</table>
+			</div>
+			<div class="row table-responsive">
+				<table class="table table-striped">
+					<thead>
+					<center>
+						<tr>
+						<h2> <input type="checkbox" id="largo" name="largo"/> <label>Servicio (no mayor a 1 semana).</label> </h2> 
+						</tr>
+					</center>
+					</thead>
+					 
+					<tbody>
+					<center>
+							<tr>
+							<td>
+							<br>
+							<li>
+							<label>Afinación</label>
+								<input type="checkbox" id="afinacion" name="afinacion"/><br</li>
+								&nbsp;
+								<ul>
+								<li>
+								<label>(Aceite)</label><input type="checkbox" id="aceite" name="afinacion[]"/><br 
+								</li>
+								<li>
+								<label>(Bujías)</label><input type="checkbox" id="bujías" name="afinacion[]"/><br
+								</li>
+								<li>
+								<label>(Filtros)</label><input type="checkbox" id="filtros" name="afinacion[]"/><br 
+								</li>
+								<li>
+								<label>(Ajuste de niveles)</label><input type="checkbox" id="ajuste_niveles" name="afinacion[]/><br
+								</li>
+							</ul>
+							
+	
+							<br>
+							<li>
+							<label>Motor</label>
+							<input type="checkbox" id="Motor" name="motor"/><br</li>
+							&nbsp;
+							<ul>
+							<br>
+							<label>Sistema de combustible.</label>
+							<input type="checkbox" id="sistema_combustible" name="sistema_combustible"/><br
+							&nbsp;
+							<li> </li>
+							<li>
+							<label>(Filtros)</label><input type="checkbox" id="filtros" name="sistema_combustible[]"/><br 
+							</li>
+							<li>
+							<label>(Bomba)</label><input type="checkbox" id="bomba" name="sistema_combustible[]"/><br
+							</li>
+							<li>
+							<label>(Deposito)</label><input type="checkbox" id="deposito" name="sistema_combustible[]"/><br 
+							</li>								
+							<li>
+							<label>(Inyectores)</label><input type="checkbox" id="inyectores" name="sistema_combustible[]"/><br  
+							</li>
+							<li>
+							<label>(Carburador)</label><input type="checkbox" id="carburador" name="sistema_combustible[]"/><br 
+							</li>
+							
+							
+							<br>
+							<label>Sistema de admisión.</label>
+							<input type="checkbox" id="sistema_admisión" name="sistema_admision"/><br
+							&nbsp;
+							<li> </li>
+							<li>
+							<label>(Filtro de aire)</label><input type="checkbox" id="filtro_aire" name="sistema_admision[]"/><br 
+							</li>
+							<li>
+							<label>(Bujías)</label><input type="checkbox" id="bujias" name="sistema_admision[]"/><br
+							</li>
+							<li>
+							<label>(Colector de admisión)</label><input type="checkbox" id="colector_admision" name="sistema_admision[]"/><br 
+							</li>
+							<li>
+							<label>(Mariposa de aceleración)</label><input type="checkbox" id="mariposa_aceleracion" name="sistema_admision[]"/><br
+							</li>
+							
+								
+							<br>
+							
+							<label>Sistema de escape.</label>
+							<input type="checkbox" id="Sistema de escape" name="sistema_escape"/><br
+							&nbsp;
+							<li> </li>
+							<li>
+							<label>(Tubería)</label><input type="checkbox" id="Tubería" name="sistema_escape[]"/><br 
+							</li>
+							<li>
+							<label>(Catalizador)</label><input type="checkbox" id="Catalizador" name="sistema_escape[]"/><br
+							</li>
+							<li>
+							<label>(Sensores)</label><input type="checkbox" id="Sensores" name="sistema_escape[]"/><br 
+							</li>
+							<li>
+							<label>(Filtros)</label><input type="checkbox" id="Filtros" name="sistema_escape[]"/><br
+							</li>
+							</li>
+							<li>
+							<label>(Silenciador)</label><input type="checkbox" id="Silenciador" name="sistema_escape[]"/><br
+							</li>
+							</li>
+							<li>
+							<label>(Válvulas)</label><input type="checkbox" id="Válvulas" name="sistema_escape[]"/><br
+							</li>
+								
+							<br>
+							<label>Sistema de ignición.</label>
+							<input type="checkbox" id="Sistema de ignición" name="sistema_ignición"/><br
+							&nbsp;
+							<li> </li>
+							<li>
+							<label>(Filtro)</label><input type="checkbox" id="Filtro" name="sistema_ignición[]"/><br 
+							</li>
+							<li>
+							<label>(Bomba)</label><input type="checkbox" id="Bomba" name="sistema_ignición[]"/><br
+							</li>
+							<li>
+							<label>(Deposito)</label><input type="checkbox" id="Deposito" name="sistema_ignición[]"/><br 
+							</li>								
+							<li>
+							<label>(Inyectores)</label><input type="checkbox" id="Inyectores" name="sistema_ignición[]"/><br  
+							</li>
+							<li>
+							<label>(Carburador)</label><input type="checkbox" id="Carburador" name="sistema_ignición[]"/><br 
+							</li>
+							
+							<br>
+							<label>Sistema de Lubricación.</label>
+							<input type="checkbox" id="Sistema de Lubricación" name="sistema_lubricacion"/><br
+							&nbsp;
+							<li> </li>
+							<li>
+							<label>(Niveles)</label><input type="checkbox" id="Niveles" name="sistema_lubricacion[]"/><br 
+							</li>
+							<li>
+							<label>(Depositos)</label><input type="checkbox" id="Depositos" name="sistema_lubricacion[]"/><br
+							</li>
+							<li>
+							<label>(Filtros)</label><input type="checkbox" id="Filtros" name="sistema_lubricacion[]"/><br 
+							</li>								
+							<li>
+							<label>(Bomba)</label><input type="checkbox" id="Bomba" name="sistema_lubricacion[]"/><br 
+							</li>
+							
+							<br>
+							<label>Sistema de Refrigeración.</label>
+							<input type="checkbox" id="Sistema de Refrigeración" name="sistema_refrigeracion"/><br
+							&nbsp;
+							<li> </li>
+							<li>
+							<label>(Anticongelante)</label><input type="checkbox" id="Anticongelante" name="sistema_refrigeracion[]"/><br 
+							</li>
+							<li>
+							<label>(Radiador)</label><input type="checkbox" id="Radiador" name="sistema_refrigeracion[]"/><br
+							</li>
+							<li>
+							<label>(Termostato)</label><input type="checkbox" id="Termostato" name="sistema_refrigeracion[]"/><br 
+							</li>								
+							<li>
+							<label>(Ventilador del Radiador)</label><input type="checkbox" id="Ventilador del Radiador" name="sistema_refrigeracion"/><br  
+							</li>
+							<li>
+							<label>(Depositos)</label><input type="checkbox" id="Depositos" name="sistema_refrigeracion[]"/><br 
+							</li>
+							
+							<br>
+							<label>Sistema de Transmición.</label>
+							<input type="checkbox" id="Sistema de Transmición" name="sistema_transmicion"/><br
+							&nbsp;
+							<li> </li>
+							<li>
+							<label>(Caja de Velocidades)</label><input type="checkbox" id="Caja de Velocidades" name="sistema_transmicion[]"/><br 
+							</li>
+							<li>
+							<label>(Palanca)</label><input type="checkbox" id="Palanca" name="sistema_transmicion[]"/><br
+							</li>
+							<li>
+							<label>(Depositos)</label><input type="checkbox" id="Depositos" name="sistema_transmicion[]"/><br 
+							</li>								
+							<li>
+							<label>(Embrague)</label><input type="checkbox" id="Embrague" name="sistema_transmicion[]"/><br  
+							</li>
+							<li>
+							<label>(Diferencial)</label><input type="checkbox" id="Diferencial" name="sistema_transmicion[]"/><br 
+							</li>
+							</li>
+							<li>
+							<label>(Bomba)</label><input type="checkbox" id="Bomba" name="sistema_transmicion[]"/><br 
+							</li>
+							</li>
+							<li>
+							<label>(Collarin)</label><input type="checkbox" id="Collarin" name="sistema_transmicion[]"/><br 
+							</li>
+							</ul>
+							
+							
+							<br>
+							<li>
+							<label>Revisión de sistema eléctrico.</label>
+							<input type="checkbox" id="Revisión de sistema eléctrico." name="sistema_eléctrico"/><br</li>
+							&nbsp;
+							<ul>
+							<li>
+							<label>(Luces Exteriores)</label><input type="checkbox" id="Luces Exteriores" name="sistema_eléctrico[]"/><br 
+							</li>
+							<li>
+							<label>(Antinieblas)</label><input type="checkbox" id="Antinieblas" name="sistema_eléctrico[]"/><br
+							</li>
+							<li>
+							<label>(Direccionales)</label><input type="checkbox" id="Direccionales" name="sistema_eléctrico[]"/><br 
+							</li>
+							<li>
+							<label>(Alinición de Luces)</label><input type="checkbox" id="Alinición de Luces" name="sistema_eléctrico[]"/><br
+							</li>
+							<li>
+							<label>(Luces Interiores)</label><input type="checkbox" id="Luces Interiores" name="sistema_eléctrico[]"/><br
+							</li>
+							<li>
+							<label>(Stops)</label><input type="checkbox" id="Stops" name="sistema_eléctrico[]"/><br
+							</li>
+							<li>
+							<label>(Marchas)</label><input type="checkbox" id="Marchas" name="sistema_eléctrico[]"/><br
+							</li>
+							<li>
+							<label>(Alternador)</label><input type="checkbox" id="Alternador" name="sistema_eléctrico[]"/><br
+							</li>
+							<li>
+							<label>(Marchas)</label><input type="checkbox" id="Marchas" name="sistema_eléctrico[]"/><br
+							</li>
+							</ul>
+							
+	
+							<br>
+							<li>
+							<label>Sistema de Frenos.</label>
+							<input type="checkbox" id="sistema de frenos" name="sistema_frenos"/><br</li>
+							&nbsp;
+							<ul>
+							<li>
+							<label>(Balatas)</label><input type="checkbox" id="Balatas" name="sistema_frenos[]"/><br 
+							</li>
+							<li>
+							<label>(Niveles)</label><input type="checkbox" id="Niveles" name="sistema_frenos[]"/><br
+							</li>
+							<li>
+							<label>(Pistones)</label><input type="checkbox" id="Pistones" name="sistema_frenos[]"/><br 
+							</li>
+							<li>
+							<label>(Pedal)</label><input type="checkbox" id="Pedal" name="sistema_frenos[]"/><br
+							</li>
+							<li>
+							<label>(Calipers)</label><input type="checkbox" id="Calipers" name="sistema_frenos[]"/><br
+							</li>
+							</ul>
+							
+	
+							<br>
+							<li>
+							<label>Dirección.</label>
+							<input type="checkbox" id="Dirección" name="direccion"/><br&nbsp;</li>
+							&nbsp;
+							<ul>
+							<li>
+							<label>(Hidraulica)</label><input type="checkbox" id="Hidraulica" name="direccion[]"/><br 
+							</li>
+							<li>
+							<label>(Electrihidraulica)</label><input type="checkbox" id="Electrihidraulica" name="direccion[]"/><br
+							</li>
+							<li>
+							<label>(Electrica)</label><input type="checkbox" id="Electrica" name="direccion[]"/><br 
+							</li>
+							<li>
+							<label>(Mecanica)</label><input type="checkbox" id="Mecanica" name="direccion[]"/><br
+							</li>
+							</ul>
+							
+	
+							<br>
+							<li>
+							<label>Climatización.</label>
+							<input type="checkbox" id="Climatización." name="climatizacion"/><br</li>
+							&nbsp;
+							<ul>
+							<li>
+							<label>(Gas Refrigerante)</label><input type="checkbox" id="Gas Refrigerante" name="climatizacion[]"/><br 
+							</li>
+							<li>
+							<label>(Compresor)</label><input type="checkbox" id="Compresor" name="climatizacion[]"/><br
+							</li>
+							<li>
+							<label>(Filtro)</label><input type="checkbox" id="Filtro" name="climatizacion[]/><br 
+							</li>
+							<li>
+							<label>(Ventilador)</label><input type="checkbox" id="Ventilador" name="climatizacion[]"/><br
+							</li>
+							<li>
+							<label>(Termostato)</label><input type="checkbox" id="Termostato" name="climatizacion[]"/><br
+							</li>
+							<li>
+							<label>(Tubería)</label><input type="checkbox" id="Tubería" name="climatizacion[]"/><br
+							</li>
+							</ul>
+							
+	
+							<br>
+							<li>
+							<label>Hojalateria.</label>
+							<input type="checkbox" id="Hojalateria" name="hojalateria"/><br</li>
+							&nbsp;
+							<ul>
+							<li>
+							<label>(Pintura)</label><input type="checkbox" id="Pintura" name="hojalateria[]"/><br 
+							</li>
+							<li>
+							<label>(Reparación de Golpes)</label><input type="checkbox" id="Reparación de Golpes" name="hojalateria[]"/><br
+							</li>
+							<li>
+							<label>(Pulir)</label><input type="checkbox" id="Pulir" name="Hojalateria[]"/><br 
+							</li>
+							<li>
+							<label>(Encerar)</label><input type="checkbox" id="Encerar" name="hojalateria[]"/><br
+							</li>
+							<li>
+							<label>(Resanar)</label><input type="checkbox" id="Resanar" name="hojalateria[]"/><br
+							</li>
+							<li>
+							<label>(Rines)</label><input type="checkbox" id="Rines" name="hojalateria[]"/><br
+							</li>
+							<li>
+							<label>(Tolvas)</label><input type="checkbox" id="Tolvas" name="hojalateria[]"/><br
+							</li>
+							</ul>
+							</tr>
+							</td>
+							
+						</center>
+					</tbody>
+				</table>
+              
+          
+      </div>
+    </div>
+
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">REGISTRAR</button>
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">GUARDAR</button>
+            <a class="btn btn-danger btn-ok"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+</html>	
